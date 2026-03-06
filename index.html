@@ -1,172 +1,257 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad - Pingüi</title>
+    <title>Privacy Policy - Pingüi</title>
+    <!-- Use relative path to icon if hosted with the app, or a standard link -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
     <style>
         :root {
-            --primary-color: #0ea5e9;
-            --secondary-color: #E6F4FE;
-            --text-color: #1f2937;
-            --heading-color: #111827;
-            --bg-color: #ffffff;
-            --block-bg: #f8fafc;
+            --navy-dark: #0f172a;
+            --navy-light: #1e293b;
+            --white: #ffffff;
+            --yellow: #fbbf24;
+            --text-gray: #e2e8f0;
+            --highlight: #334155;
         }
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            max-width: 800px;
+            line-height: 1.7;
+            color: var(--text-gray);
+            max-width: 900px;
             margin: 0 auto;
-            padding: 40px 20px;
-            background-color: var(--bg-color);
+            padding: 60px 25px;
+            background-color: var(--navy-dark);
         }
         header {
             text-align: center;
-            margin-bottom: 50px;
-            padding-bottom: 30px;
-            border-bottom: 2px solid var(--secondary-color);
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 2px solid var(--navy-light);
         }
-        .logo {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--primary-color);
-            margin-bottom: 10px;
-            display: block;
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
         }
-        h1 { font-size: 2rem; color: var(--heading-color); margin-top: 0; }
-        h2 { font-size: 1.5rem; color: var(--primary-color); margin-top: 40px; border-left: 4px solid var(--primary-color); padding-left: 15px; }
-        h3 { font-size: 1.2rem; color: var(--heading-color); margin-top: 25px; }
-        p { margin-bottom: 1.5rem; }
-        ul { margin-bottom: 1.5rem; padding-left: 20px; }
-        li { margin-bottom: 0.5rem; }
+        .logo-text {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--white);
+            letter-spacing: -1px;
+        }
+        .logo-dot {
+            color: var(--yellow);
+        }
+        h1 {
+            font-size: 2.2rem;
+            color: var(--yellow);
+            margin-top: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        h2 {
+            font-size: 1.6rem;
+            color: var(--white);
+            margin-top: 50px;
+            border-bottom: 2px solid var(--yellow);
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 25px;
+        }
+        h3 {
+            font-size: 1.3rem;
+            color: var(--yellow);
+            margin-top: 30px;
+        }
+        p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+        ul {
+            margin-bottom: 1.5rem;
+            padding-left: 25px;
+            list-style-type: none;
+        }
+        li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            opacity: 0.9;
+        }
+        li::before {
+            content: "•";
+            color: var(--yellow);
+            font-weight: bold;
+            position: absolute;
+            left: -20px;
+        }
         .last-updated {
-            font-style: italic;
-            color: #6b7280;
-            margin-top: -10px;
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            opacity: 0.6;
+            margin-top: 10px;
         }
-        .section-block {
-            background-color: var(--block-bg);
-            padding: 25px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            border: 1px solid #e2e8f0;
+        .section-card {
+            background-color: var(--navy-light);
+            padding: 35px;
+            border-radius: 16px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
-        .highlight {
-            background-color: #fef3c7;
-            padding: 2px 5px;
-            border-radius: 4px;
+        .placeholder {
+            color: var(--yellow);
+            border-bottom: 1px dashed var(--yellow);
             font-weight: bold;
         }
-        .contact-box {
-            border: 2px dashed var(--primary-color);
+        .important-note {
+            background: rgba(251, 191, 36, 0.1);
+            border-left: 4px solid var(--yellow);
             padding: 20px;
-            border-radius: 12px;
-            background-color: var(--secondary-color);
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+        .contact-footer {
+            margin-top: 80px;
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(180deg, var(--navy-light) 0%, var(--navy-dark) 100%);
+            border-radius: 20px;
+            border: 1px solid rgba(251, 191, 36, 0.3);
         }
         footer {
-            margin-top: 60px;
+            margin-top: 40px;
             text-align: center;
-            font-size: 0.9rem;
-            color: #9ca3af;
-            border-top: 1px solid #eee;
-            padding-top: 20px;
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            opacity: 0.4;
         }
         @media (max-width: 600px) {
-            body { padding: 20px 15px; }
-            h1 { font-size: 1.7rem; }
+            body {
+                padding: 30px 20px;
+            }
+            .logo-text {
+                font-size: 2.2rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <span class="logo">Pingüi</span>
-        <h1>Política de Privacidad</h1>
-        <p class="last-updated">Última actualización: Marzo 2026</p>
+        <div class="logo-container">
+            <!-- You can add an <img> tag here for a physical logo if you have one -->
+            <span class="logo-text">PINGÜI<span class="logo-dot">.</span></span>
+        </div>
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last updated: March 06, 2026</p>
     </header>
-    <div class="section-block">
-        <h2>1. Introducción</h2>
+    <div class="section-card">
+        <h2>1. Introduction</h2>
         <p>
-            <strong>Pingüi: Learn Through Stories</strong> ("Pingüi", "la Aplicación") es operada por <strong>Manchay Montoya Keyner Alexis</strong> ("nosotros", "nuestro"), con sede en Ecuador.
+            <strong>Pingüi: Learn Through Stories</strong> ("Pingüi", "the App") is operated by <strong>Manchay Montoya
+                Keyner Alexis</strong> ("we", "us", or "our"), based in Ecuador.
+        </p>
+        <p class="important-note">
+            This Privacy Policy applies solely to the use of the Pingüi application and does not apply to any
+            third-party services, websites, or applications that may be accessible through our platform.
         </p>
         <p>
-            Esta Política de Privacidad explica cómo recopilamos, usamos, almacenamos y protegemos su información cuando utiliza nuestra aplicación móvil. Al usar Pingüi, usted acepta la recopilación y el uso de información de acuerdo con esta política.
+            By using Pingüi, you agree to the collection and use of information in accordance with this policy. We are
+            committed to protecting your personal data and your privacy.
         </p>
     </div>
-    <h2>2. Información que Recopilamos</h2>
-    <h3>2.1 Información Personal</h3>
-    <p>Cuando inicia sesión con <strong>Google Login</strong>, podemos recopilar:</p>
+    <h2>2. Information We Collect</h2>
+    <h3>2.1 Personal Information</h3>
+    <p>When you sign in using <strong>Google Login</strong>, we may collect:</p>
     <ul>
-        <li>Dirección de correo electrónico</li>
-        <li>Nombre y apellidos</li>
-        <li>URL de la imagen de perfil (Avatar)</li>
-        <li>ID de usuario único</li>
+        <li>Email address</li>
+        <li>Full name</li>
+        <li>Profile picture URL (Avatar)</li>
+        <li>Unique User ID (UID)</li>
     </ul>
-    <h3>2.2 Contenido Generado por el Usuario y Progreso</h3>
-    <p>Para ofrecer una experiencia personalizada, almacenamos:</p>
+    <h3>2.2 Learning Progress and Usage Data</h3>
+    <p>To provide a personalized learning experience, we store:</p>
     <ul>
-        <li>Vocabulario guardado y palabras dominadas</li>
-        <li>Historial de lectura y favoritos</li>
-        <li>Puntos de experiencia (XP), rachas y progreso de aprendizaje</li>
-        <li>Historias generadas por IA personalizadas para su perfil</li>
-        <li>Publicaciones y "likes" en la sección comunitaria (visibles para otros usuarios)</li>
+        <li>Saved vocabulary and mastered words</li>
+        <li>Reading history and favorite stories</li>
+        <li>Experience points (XP), learning streaks, and rank progress</li>
+        <li>AI-generated stories customized for your profile</li>
+        <li>Community interactions (likes and public posts)</li>
     </ul>
-    <h3>2.3 Permisos del Dispositivo</h3>
-    <p>La aplicación puede solicitar acceso a:</p>
-    <ul>
-        <li><strong>Micrófono:</strong> Utilizado exclusivamente para funciones de práctica de pronunciación (grabación de audio). No grabamos ni almacenamos audio de fondo, solo durante la interacción activa con la función.</li>
-        <li><strong>Notificaciones:</strong> Para recordatorios de práctica diaria y actualizaciones importantes.</li>
-    </ul>
-    <h3>2.4 Datos de Publicidad (AdMob)</h3>
-    <p>Utilizamos <strong>Google AdMob</strong> para mostrar anuncios. AdMob puede recopilar:</p>
-    <ul>
-        <li>Identificadores de dispositivo (GAID, IDFA)</li>
-        <li>Datos de uso y clics en anuncios</li>
-    </ul>
-    <h2>3. Cómo Usamos su Información</h2>
-    <p>Utilizamos la información recopilada para:</p>
-    <ul>
-        <li>Sincronizar su progreso entre múltiples dispositivos.</li>
-        <li>Personalizar las historias generadas por IA según su nivel e intereses.</li>
-        <li>Gestionar suscripciones premium a través de Google Play Billing.</li>
-        <li>Mostrar anuncios relevantes y mantener la aplicación gratuita para usuarios básicos.</li>
-        <li>Moderar el contenido en la comunidad para garantizar un entorno seguro.</li>
-    </ul>
-    <h2>4. Servicios de Terceros</h2>
-    <p>Pingüi utiliza proveedores de servicios confiables que procesan datos según sus propias políticas:</p>
-    <ul>
-        <li><strong>Supabase:</strong> Infraestructura de base de datos y autenticación de alta seguridad.</li>
-        <li><strong>Google (Login, Play Billing, AdMob):</strong> Para el acceso, pagos y publicidad.</li>
-    </ul>
-    <div class="section-block">
-        <h2>5. Eliminación de Datos y Cuenta</h2>
-        <p>En Pingüi respetamos su derecho al olvido. Usted puede eliminar su cuenta y todos los datos asociados de forma permanente:</p>
-        <ul>
-            <li>Abra la aplicación <strong>Pingüi</strong>.</li>
-            <li>Vaya a <strong>Perfil > Configuración</strong>.</li>
-            <li>Seleccione la opción <strong>"Eliminar Cuenta"</strong>.</li>
-        </ul>
-        <p>Una vez confirmada, se eliminarán instantáneamente su perfil, historial, vocabulario y cualquier contenido asociado de nuestros servidores. No es posible recuperar estos datos tras la eliminación.</p>
-    </div>
-    <h2>6. Privacidad Infantil</h2>
+    <h3>2.3 Subscriptions and Payments</h3>
     <p>
-        Pingüi no está dirigida específicamente a menores de 13 años. Si detectamos que hemos recopilado información personal de un niño menor de 13 años sin el consentimiento parental adecuado radicaremos los datos de inmediato.
+        Subscriptions are processed through <strong>Google Play Billing</strong>. We do not collect or store your credit
+        card or bank information directly. Payment processing is handled securely by Google, and we only receive
+        confirmation of your subscription status to unlock Premium features.
     </p>
-    <h2>7. Cambios en esta Política</h2>
-    <p>Podemos actualizar nuestra Política de Privacidad periódicamente. Le notificaremos cualquier cambio publicando la nueva Política de Privacidad en esta página.</p>
-    <div class="contact-box">
-        <h2>8. Información de Contacto</h2>
-        <p>Si tiene preguntas sobre esta política o sus datos personales, puede contactarnos en:</p>
+    <h2>3. Device Permissions</h2>
+    <p>The App may request the following permissions to function correctly:</p>
+    <ul>
+        <li><strong>Microphone:</strong> Required for pronunciation practice features. Audio is processed only while the
+            feature is active and is not recorded or stored without your explicit action.</li>
+        <li><strong>Notifications:</strong> Used for daily study reminders and progress updates.</li>
+    </ul>
+    <div class="section-card">
+        <h2>4. Data Security</h2>
         <p>
-            <strong>Responsable:</strong> Manchay Montoya Keyner Alexis<br>
-            <strong>País:</strong> Ecuador<br>
-            <strong>Correo de Soporte:</strong> <span class="highlight">[correo de soporte]</span><br>
-            <strong>Contacto General (Privacidad):</strong> <span class="highlight">kirth.dev@gmail.com</span>
+            We take the security of your data very seriously. We implement industrial-standard technical and
+            organizational measures to protect your information:
+        </p>
+        <ul>
+            <li><strong>Encryption:</strong> All data transmitted between the App and our servers is encrypted using
+                Secure Socket Layer (SSL/TLS) technology.</li>
+            <li><strong>Secure Storage:</strong> We consolidate user data using <strong>Supabase</strong>, a secure
+                cloud infrastructure with robust authentication and access control policies.</li>
+            <li><strong>Regular Audits:</strong> We periodically review our data collection and storage practices to
+                ensure compliance with modern security standards.</li>
+        </ul>
+    </div>
+    <h2>5. Advertising and Analytics</h2>
+    <p>We use <strong>Google AdMob</strong> to display advertisements. Depending on your region and choices, AdMob may
+        serve:</p>
+    <ul>
+        <li><strong>Personalized Ads:</strong> Based on your interests, demographics, and previous interactions.</li>
+        <li><strong>Non-Personalized Ads:</strong> Contextual ads that do not use tracking identifiers but may still use
+            limited geographical or device information.</li>
+    </ul>
+    <p>Data collected by AdMob is managed according to Google’s Privacy Policy. You can manage your ad preferences
+        within your device settings.</p>
+    <div class="section-card">
+        <h2>6. Account and Data Deletion</h2>
+        <p>You have the right to delete your account and all associated data at any time directly within the App:</p>
+        <ul>
+            <li>Open the <strong>Pingüi</strong> App.</li>
+            <li>Go to <strong>Profile > Settings</strong>.</li>
+            <li>Select the <strong>"Delete Account"</strong> option.</li>
+        </ul>
+        <p>Upon confirmation, your profile, learning history, vocabulary, and all associated markers will be permanently
+            removed from our production servers within 24 hours. User-generated content in the community may be
+            anonymized or removed.</p>
+    </div>
+    <h2>7. Children's Privacy</h2>
+    <p>
+        Pingüi is not specifically directed toward children under the age of 13. If we become aware that we have
+        collected personal information from a child under 13 without verifiable parental consent, we will take immediate
+        steps to delete such information from our systems.
+    </p>
+    <div class="contact-footer">
+        <h2>8. Contact Information</h2>
+        <p>For questions regarding this policy or your data rights, please contact us:</p>
+        <p>
+            <strong>Developer:</strong> Manchay Montoya Keyner Alexis<br>
+            <strong>Location:</strong> Ecuador<br>
+            <strong>Support Email:</strong> <span class="placeholder">[support email]</span><br>
+            <strong>Privacy/General Inquiries:</strong> kirth8.dev@gmail.com
         </p>
     </div>
     <footer>
-        <p>&copy; 2026 Pingüi - Learn Through Stories. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Pingüi - Learn Through Stories. All rights reserved.</p>
     </footer>
 </body>
 </html>
