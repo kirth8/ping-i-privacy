@@ -149,7 +149,7 @@
             <span class="logo-text">PINGÜI<span class="logo-dot">.</span></span>
         </div>
         <h1>Privacy Policy</h1>
-        <p class="last-updated">Last updated: March 06, 2026</p>
+        <p class="last-updated">Last updated: March 24, 2026</p>
     </header>
     <div class="section-card">
         <h2>1. Introduction</h2>
@@ -168,12 +168,13 @@
     </div>
     <h2>2. Information We Collect</h2>
     <h3>2.1 Personal Information</h3>
-    <p>When you sign in using <strong>Google Login</strong>, we may collect:</p>
+    <p>When you create an account using <strong>Email/Password</strong> or sign in using <strong>Google Login</strong>, we may collect:</p>
     <ul>
         <li>Email address</li>
         <li>Full name</li>
         <li>Profile picture URL (Avatar)</li>
         <li>Unique User ID (UID)</li>
+        <li>Encrypted password hash (for email-based accounts only; we never store passwords in plain text)</li>
     </ul>
     <h3>2.2 Learning Progress and Usage Data</h3>
     <p>To provide a personalized learning experience, we store:</p>
@@ -186,9 +187,25 @@
     </ul>
     <h3>2.3 Subscriptions and Payments</h3>
     <p>
-        Subscriptions are processed through <strong>Google Play Billing</strong>. We do not collect or store your credit
-        card or bank information directly. Payment processing is handled securely by Google, and we only receive
-        confirmation of your subscription status to unlock Premium features.
+        Subscriptions are processed through <strong>Google Play Billing</strong> and managed by
+        <strong>RevenueCat</strong>, a third-party subscription management service. We do not collect or store your
+        credit card or bank information directly. Payment processing is handled securely by Google, and RevenueCat
+        provides us with confirmation of your subscription status to unlock Premium features. RevenueCat may collect
+        anonymized purchase data in accordance with their own privacy policy.
+    </p>
+    <h3>2.4 Locally Cached Data</h3>
+    <p>
+        To improve your experience in areas with limited connectivity, the App may store certain content locally on
+        your device, such as previously read stories, vocabulary, and user preferences. This data remains on your
+        device and is not transmitted to external servers. You can clear this cached data at any time by clearing
+        the App's data in your device settings.
+    </p>
+    <h3>2.5 Account Recovery</h3>
+    <p>
+        If you request a password reset, we will send a one-time verification code (OTP) to your registered email
+        address. These codes are temporary (valid for a limited time), generated securely by our authentication
+        provider (<strong>Supabase</strong>), and are not stored permanently. We do not share your email address
+        with any third party during this process.
     </p>
     <h2>3. Device Permissions</h2>
     <p>The App may request the following permissions to function correctly:</p>
@@ -196,6 +213,9 @@
         <li><strong>Microphone:</strong> Required for pronunciation practice features. Audio is processed only while the
             feature is active and is not recorded or stored without your explicit action.</li>
         <li><strong>Notifications:</strong> Used for daily study reminders and progress updates.</li>
+        <li><strong>Internet Access:</strong> Required for loading stories, synchronizing progress, community features,
+            AI story generation, and displaying advertisements. The App offers limited offline functionality with
+            previously cached content.</li>
     </ul>
     <div class="section-card">
         <h2>4. Data Security</h2>
